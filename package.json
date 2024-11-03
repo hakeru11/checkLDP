@@ -1,0 +1,22 @@
+{
+  "name": "webldp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@playwright/test": "^1.48.2",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^2.7.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "playwright-html-reporter": "^0.1.11"
+  }
+}
