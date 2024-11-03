@@ -46,7 +46,7 @@ class VIP79 {
 
 
     // Verify đăng ký thành công
-    async verifyDangKyThanhCongvip79(domain){
+    async verifyDangKyThanhCongVIP79(domain){
         try{
             await this.delay();
             await expect(this.HomePage).toBeVisible();

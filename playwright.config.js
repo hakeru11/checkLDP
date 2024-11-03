@@ -11,7 +11,7 @@ export default defineConfig({
   use: {
     browserName: 'chromium', // Hoặc 'firefox', 'webkit' tùy chọn
     navigationTimeout: 60000,
-    headless: true,
+    headless: false,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',

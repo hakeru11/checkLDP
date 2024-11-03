@@ -10,8 +10,8 @@ const path = require('path');
 // Lấy các biến môi trường từ file .env
 const filePath = process.env.EXCEL_FILE_PATH;
 const columnLetter = process.env.COLUMN_LETTER;
-const TOKEN = '7285866005:AAEcIjPU9kzvMTSWii2-8O85mS3blcCGsm8';
-const CHAT_ID = '-4524902329';
+const TOKEN = process.env.BOT_TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
 
 const sheetName = path.basename(__filename, '.spec.js');
 const urls = getUrls(filePath, sheetName, columnLetter);
