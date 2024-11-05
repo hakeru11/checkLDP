@@ -39,7 +39,7 @@ export class RandomCredentials {
         
         // Tạo 7 chữ số ngẫu nhiên còn lại
         let randomDigits = '';
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 7; i++) {
             randomDigits += Math.floor(Math.random() * 10);
         }
     
