@@ -2,7 +2,7 @@ import { RandomCredentials } from '../utils/randomdata';
 require('dotenv').config();
 const TelegramBotService = require('../utils/telegramBot');
 const { test } = require('@playwright/test');
-const B52 = require('../pages/B52');
+const NBET = require('../pages/NBET');
 const getUrls = require('../utils/sheet');
 const path = require('path');
 
@@ -21,20 +21,20 @@ const bot = new TelegramBotService(TOKEN, CHAT_ID);
 // Tạo test case riêng biệt cho từng URL
 for (const url of urls) {
     test(`Check Register and navigate to game screen for URL: ${url}`, async ({ page }) => {
-        const b52 = new B52(page);
+        const nbet = new NBET(page);
         try {
             console.log(`Đang điều hướng đến: ${url}`);
             
-            await b52.navigate(url);
+            await nbet.navigate(url);
             // tạo username + password random
             const username = RandomCredentials.generateUsername();
             const password = RandomCredentials.generatePassword(10);
-            
+            const phone = RandomCredentials.generateRandomPhoneNumber();
             // thực hiện đăng ký username, password
-            await b52.register(username, password);
+            await nbet.register(username, password, phone);
             
             // verify tạo account thành công và chuyển sang màn hình gameScreen
-            await b52.verifyDangKyThanhCongB52(url);
+            await nbet.verifyDangKyThanhCongNBET(url);
 
             console.log(`✅ Đã đăng ký tài khoản thành công cho URL: ${url}`);
             console.log("username: " + username);

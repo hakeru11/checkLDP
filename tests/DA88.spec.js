@@ -58,5 +58,5 @@ test.afterAll(async () => {
     console.log("🎉 Đã hoàn thành Đăng Ký tài khoản cho tất cả các URL: " + sheetName);
 
     // thông báo hoàn thành đăng ký cho tất cả các Url qua bot telegram
-    await bot.sendMessage("🎉 Đã Đăng Ký tài khoản cho tất cả các URL: " + sheetName);
+    await bot.sendMessage("🎉 Đã Đăng Ký tài khoản Thành Công cho tất cả các URL: " + sheetName);
 });
