@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx playwright test",
+    "B52": "npx playwright test tests/B52.spec.js",
+    "VIP79": "npx playwright test tests/VIP79.spec.js",
+    "TOP88": "npx playwright test tests/TOP88.spec.js",
+    "TIPCLUB": "npx playwright test tests/TIPCLUB.spec.js",
+    "DA88": "npx playwright test tests/DA88.spec.js",
+    "WI88": "npx playwright test tests/WI88.spec.js"
+
   },
   "keywords": [],
   "author": "",
