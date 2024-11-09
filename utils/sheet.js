@@ -99,6 +99,20 @@ class getUrls {
       return null;
     }
   }
+  async writeRowValues(auth, { spreadsheetId, range, values, responseValueRenderOption = 'UNFORMATTED_VALUE' }) {
+    const sheets = google.sheets({ version: 'v4', auth });
+
+    const res = await sheets.spreadsheets.values.update({
+      spreadsheetId,
+      range,
+      responseValueRenderOption,
+      valueInputOption: 'RAW',
+      requestBody: {
+        values,
+      },
+    });
+    return res.data;
+  }
 }
 
 export default getUrls;  // export mặc định
