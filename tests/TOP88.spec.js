@@ -75,5 +75,5 @@ test('Check Register and navigate to game screen for all URLs', async ({page}) =
 test.afterAll(async () => {
   console.log("🎉 Đã hoàn thành Đăng Ký tài khoản cho tất cả các URL: " + sheetName);
   const bot = new TelegramBotService(TOKEN, CHAT_ID);
-  await bot.sendMessage("🎉 Đã Đăng Ký tài khoản Thành Công cho tất cả các URL: " + sheetName);
+  await bot.sendMessage("🎉 Đã Đăng Ký tài khoản Thành Công cho tất cả các URLs: " + sheetName);
 });
