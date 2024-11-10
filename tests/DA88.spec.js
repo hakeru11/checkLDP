@@ -42,7 +42,7 @@ test('Check Register and navigate to game screen for all URLs', async ({page}) =
 
     try {
       console.log(`Đang điều hướng đến: ${url}`);
-      await go88.navigate(url);
+      await da88.navigate(url);
 
       // Tạo username + password random
       const username = RandomCredentials.generateUsername();

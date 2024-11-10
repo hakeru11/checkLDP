@@ -36,7 +36,7 @@ class VIP79 {
             await this.delay();
             await this.MatKhau_DK_Txt.fill(password);
             await this.delay();
-            await this.DangKy_DK_Btn.click();
+            await this.DangKy_DK_Btn.click({ force: true });
             await this.page.waitForTimeout(6000);
         } catch (error) {
             console.error('Lỗi khi đăng ký:', error.message);
